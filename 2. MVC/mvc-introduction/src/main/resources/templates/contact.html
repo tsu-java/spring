@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <form method="post" th:action="@{/contact}">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Password</label>
+            <textarea name="message" rows="4" type="password" class="form-control" id="message"
+                      placeholder="Enter your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit &raquo;</button>
+    </form>
+</div>
+<script layout:fragment="additional-scripts">
+    alert("This form doesn't work well!");
+</script>
+</body>
+</html>
